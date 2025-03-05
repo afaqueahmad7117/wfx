@@ -209,8 +209,6 @@ This notebook shows:
 3. How to generate Databricks workflow json (Workflow API compatible)
 4. How to convert it to DAB compatible YAML format
 
-It's an excellent way to understand the conversion process in detail and experiment with customizations.
-
 ## Contributing
 
 1. Fork the repository
