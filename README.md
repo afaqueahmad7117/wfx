@@ -195,17 +195,17 @@ jupyter notebook playbook.ipynb
 ```
 
 This notebook shows:
-1. How to load and process the Airflow DAG
-2. How to extract task dependencies
-3. How to generate the Databricks workflow JSON
-4. How to convert it to YAML format
+1. How to setup the input Airflow DAG and paths
+2. Specify all the parameters (input dag path, dag name, workflow name, DAB yml output path )
+3. How to generate Databricks workflow json (Workflow API compatible)
+4. How to convert it to DAB compatible YAML format
 
 It's an excellent way to understand the conversion process in detail and experiment with customizations.
 
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
+2. Create a feature branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m 'Add my feature'`
+4. Push to the branch: `git push origin feature/my-feature`
 5. Submit a pull request
