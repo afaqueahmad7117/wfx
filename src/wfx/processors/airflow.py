@@ -3,7 +3,7 @@ import os
 import re
 import warnings
 
-from src.wfx.constants.settings import REPOS_PREFIX, TARGET_TASKS_PATH
+from wfx.constants.settings import REPOS_PREFIX, TARGET_TASKS_PATH
 
 
 class AirflowProcessor:

@@ -32,8 +32,8 @@ def main(
     if not config_path.is_absolute():
         config_path = PROJECT_ROOT / config
 
-    from src.wfx.processors.gsheet import GsheetProcessor
-    from src.wfx.processors.airflow import AirflowProcessor
+    from wfx.processors.gsheet import GsheetProcessor
+    from wfx.processors.airflow import AirflowProcessor
 
     gsheet_processor = GsheetProcessor(dag_name, str(config_path))
     airflow_processor = AirflowProcessor(dag_name, gsheet_processor, str(dag_path))
