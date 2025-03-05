@@ -80,7 +80,6 @@ class DBXDabConverter:
         """
         dabs_task = {"task_key": task["task_key"]}
 
-        # Handle dependencies in correct format
         if "depends_on" in task:
             dabs_task["depends_on"] = self.convert_task_dependencies(task["depends_on"])
 
@@ -103,7 +102,6 @@ class DBXDabConverter:
                 )
                 break
 
-        # Handle common task parameters
         common_params = {
             "email_notifications",
             "timeout_seconds",
