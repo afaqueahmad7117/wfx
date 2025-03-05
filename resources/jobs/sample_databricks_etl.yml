@@ -1,0 +1,35 @@
+resources:
+  jobs:
+    sample_databricks_etl:
+      name: sample_databricks_etl
+      tasks:
+      - task_key: data_validation_task
+        depends_on: []
+        notebook_task:
+          notebook_path: /repos/data_team/etl/validation
+          source: WORKSPACE
+      - task_key: data_processing_task
+        depends_on:
+        - task_key: data_validation_task
+        notebook_task:
+          notebook_path: /repos/data_team/etl/processing
+          source: WORKSPACE
+      - task_key: data_export_task
+        depends_on:
+        - task_key: data_processing_task
+        notebook_task:
+          notebook_path: /repos/data_team/etl/export
+          source: WORKSPACE
+      - task_key: report_generation_task
+        depends_on:
+        - task_key: data_processing_task
+        notebook_task:
+          notebook_path: /repos/data_team/etl/reporting
+          source: WORKSPACE
+      - task_key: downstream_trigger_task
+        depends_on:
+        - task_key: data_export_task
+        - task_key: report_generation_task
+        notebook_task:
+          notebook_path: /repos/data_team/etl/trigger
+          source: WORKSPACE

@@ -1,0 +1,6 @@
+CURRENT_WORKFLOW_NAME,OLD_TASK_NAME,NEW_TASK_NAME,NEW_GIT_PATH,DATABRICKS_WORKFLOW_NAME
+data_processing,validate_input_data,data_validation_task,/repos/data_team/etl/validation,sample_databricks_etl
+data_processing,process_data,data_processing_task,/repos/data_team/etl/processing,sample_databricks_etl
+data_processing,export_processed_data,data_export_task,/repos/data_team/etl/export,sample_databricks_etl
+data_processing,generate_report,report_generation_task,/repos/data_team/etl/reporting,sample_databricks_etl
+data_processing,trigger_downstream_dag,downstream_trigger_task,/repos/data_team/etl/trigger,sample_databricks_etl
