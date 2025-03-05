@@ -61,7 +61,7 @@ wfx/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/wfx.git
+   git clone https://github.com/afaqueahmad7117/wfx.git
    cd wfx
    ```
 
