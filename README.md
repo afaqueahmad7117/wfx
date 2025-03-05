@@ -88,9 +88,11 @@ wfx/
 The tool is used as a command-line utility:
 
 ```bash
-dabconvert -i airflow_dag_directory -d dag_directory \
-           -o resources/jobs -w output_workflow_name \
-           -c dag_to_workflow_task_mapping.csv
+dabconvert -i ALL_DAGs_DIR \
+           -d DAG_NAME_DIR \
+           -o OUTPUT_DIR \
+           -w OUTPUT_WORKFLOW_NAME \
+           -c CONFIG_PATH
 ```
 
 Make sure you've activated the Poetry environment with `poetry shell` before running the command.
