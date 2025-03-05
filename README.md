@@ -12,20 +12,20 @@ WFX streamlines the migration process from Airflow to Databricks by automaticall
 wfx/
 ├── configs/                          # Cluster configuration
 │   └── clusters/                     # Databricks cluster specifications
-│       ├── dev.json                  # Development cluster config with i3.xlarge nodes
-│       └── prod.json                 # Production cluster config template
+│       ├── dev.json                  # Development cluster config example
+│       └── prod.json                 # Production cluster config example
 ├── inputs/
 │   ├── airflow_dags/                 # Source Airflow DAG files
-│   │   └── data_processing/          # Example DAG directory
-│   │       └── workflow_setting.py   # Sample Airflow DAG definition
-│   ├── dbx_workflows/                # Intermediate JSON representation
-│   │   └── data_processing_tasks_config.json  # Generated task configs (Workflow API compatible)
+│   │   └── data_processing/          # Example Airflow DAG directory
+│   │       └── workflow_setting.py   # Sample Airflow DAG
+│   ├── dbx_workflows/                # Workflow API compatible JSON
+│   │   └── data_processing_tasks_config.json  # Generated task config json
 │   └── mappings/                     # Task mappings from Airflow to Databricks
 │       └── data_processing/          # Example DAG mapping directory
 │           └── task_list_all.csv     # CSV mapping old Airflow tasks to new Databricks tasks
 ├── resources/
 │   └── jobs/                         # Output DABs YAML files
-│       └── sample_databricks_etl.yml # Generated Databricks workflow
+│       └── sample_databricks_etl.yml # Generated Databricks workflow yml
 ├── src/
 │   └── wfx/
 │       ├── constants/                # Global settings
