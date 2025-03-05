@@ -1,6 +1,7 @@
 # WFX - Workflow Migration Utility For Databricks
 
 A tool for migrating Airflow DAGs to Databricks Asset Bundles (DABs).
+![](docs/flow.png)
 
 ## Overview
 
