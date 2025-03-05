@@ -87,9 +87,9 @@ wfx/
 The tool is used as a command-line utility:
 
 ```bash
-dabconvert -i inputs/airflow_dags -d data_processing \
-           -o resources/jobs -w sample_databricks_etl \
-           -c inputs/mappings/data_processing/task_list_all.csv
+dabconvert -i airflow_dag_directory -d dag_directory \
+           -o resources/jobs -w output_workflow_name \
+           -c dag_to_workflow_task_mapping.csv
 ```
 
 Make sure you've activated the Poetry environment with `poetry shell` before running the command.
@@ -103,6 +103,14 @@ Make sure you've activated the Poetry environment with `poetry shell` before run
 | `-o`       | `--output-dir`    | Directory to write the Databricks workflow YAML|
 | `-w`       | `--workflow-name` | Name of the output workflow file               |
 | `-c`       | `--config`        | Path to the mapping file (CSV format)          |
+
+Example with short form arguments: 
+
+```bash
+dabconvert -i inputs/airflow_dags -d data_processing \
+           -o resources/jobs -w sample_databricks_etl \
+           -c inputs/mappings/data_processing/task_list_all.csv
+```
 
 ### Mapping File Format
 
