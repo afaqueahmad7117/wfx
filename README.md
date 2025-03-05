@@ -46,9 +46,9 @@ wfx/
 
 - **Task Dependency Preservation**: Maintains the exact dependency structure of Airflow DAGs
 - **Parameter Mapping**: Converts Airflow task parameters to Databricks notebook parameters
-- **Flexible Configuration**: Supports customization via mapping files
+- **Flexible Configuration**: Supports customization via mapping files (input task name, output task name, filepaths)
 - **Support for Multiple Task Types**: Handles various Databricks task types (notebook, Python, SQL, etc.)
-- **CLI Interface**: Easy-to-use command line tool
+- **CLI Interface**: Easy-to-use command line tool + Python playbook (notebook)
 
 ## Installation
 
