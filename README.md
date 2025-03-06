@@ -73,7 +73,9 @@ wfx/
 
 3. Activate the Poetry environment:
    ```bash
-   poetry shell
+   poetry env activate
+   # After running this command, something like the below will be printed, run it to activate the env
+   # source /Users/.../<env-name>/bin/activate
    ```
 
 4. Verify installation:
